@@ -1,8 +1,6 @@
 package pl.coderslab.DAO;
 
 import org.mindrot.jbcrypt.BCrypt;
-import pl.coderslab.DbUtil;
-import pl.coderslab.entity.User;
 import pl.coderslab.utils.DbUtil;
 
 import java.sql.*;
