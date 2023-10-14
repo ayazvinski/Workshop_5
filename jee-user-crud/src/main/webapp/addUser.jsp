@@ -82,35 +82,31 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Users</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Add New User</a>
+                        <h1 class="h3 mb-0 text-gray-800">Create New User</h1>
+                        <a href="<c:url value="/user/list"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> List of Users</a>
                     </div>
 
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${users}" var="user">
-                        <tr>
-                            <td>${user.id}</td>
-                            <td>${user.userName}</td>
-                            <td>${user.email}</td>
-                            <td>
-                            <a href='<c:url value="/user/delete?id=${user.id}"/>'>Delete</a>
-                            <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edit</a>
-                            <a href='<c:url value="/user/show?id=${user.id}"/>'>View</a>
-                            </td>
-                        </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
+                    <form action="user/list" method="post">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="userName">Username</label>
+                                    <input name="userName" type="text" class="form-control" id="userName" placeholder="Enter username">
+                                </div>
+                                <div>
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input name ="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create</button>
+
+                    </form>
+
+
 
                     <!-- Content Row -->
 
