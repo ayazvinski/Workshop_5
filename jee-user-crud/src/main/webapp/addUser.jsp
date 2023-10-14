@@ -46,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="list.jsp">
+                <a class="nav-link" href="allUsers.jsp">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -87,7 +87,7 @@
                                 class="fas fa-download fa-sm text-white-50"></i> List of Users</a>
                     </div>
 
-                    <form action="user/list" method="post">
+                    <form method="post">
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="userName">Username</label>
@@ -158,21 +158,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../theme/vendor/jquery/jquery.min.js"></script>
-    <script src="../theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./theme/vendor/jquery/jquery.min.js"></script>
+    <script src="./theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./theme/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../theme/js/sb-admin-2.min.js"></script>
+    <script src="./theme/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../theme/vendor/chart.js/Chart.min.js"></script>
+    <script src="./theme/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="../theme/js/demo/chart-area-demo.js"></script>
-    <script src="../theme/js/demo/chart-pie-demo.js"></script>
+    <script src="./theme/js/demo/chart-area-demo.js"></script>
+    <script src="./theme/js/demo/chart-pie-demo.js"></script>
 
 </body>
 
