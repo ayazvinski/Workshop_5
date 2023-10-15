@@ -103,7 +103,7 @@
                             <td>${user.userName}</td>
                             <td>${user.email}</td>
                             <td>
-                                <a href='<c:url value="/user/delete?id=${user.id}"/>'>Delete</a>
+                                <a href='<c:url value="/user/delete?id=${user.id}"/>' class="delete-link">Delete</a>
                                 <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edit</a>
                                 <a href='<c:url value="/user/show?id=${user.id}"/>'>View</a>
                             </td>
@@ -177,6 +177,24 @@
 <!-- Page level custom scripts -->
 <script src="./theme/js/demo/chart-area-demo.js"></script>
 <script src="./theme/js/demo/chart-pie-demo.js"></script>
+
+<script>
+    var deleteLinks = document.querySelectorAll(".delete-link");
+    deleteLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent the link from navigating
+            var userConfirmed = confirm("Are you sure you want to delete this user?");
+            if (userConfirmed) {
+                // User clicked "OK" (equivalent to "Yes")
+                // Add code here to perform the deletion action
+                window.location.href = link.href; // Navigate to the delete URL
+            } else {
+                // User clicked "Cancel" (equivalent to "No")
+                // Handle the cancellation or do nothing
+            }
+        });
+    });
+</script>
 
 </body>
 
