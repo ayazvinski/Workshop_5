@@ -82,27 +82,26 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Create New User</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Edit User</h1>
                         <a href="<c:url value="/user/list"/>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> List of Users</a>
                     </div>
 
                     <form method="post">
-                            <div class="form-group">
+                                <input type="hidden" name="id" value="${user.id}"/>
                                 <div class="form-group">
                                     <label for="userName">Username</label>
-                                    <input name="userName" type="text" class="form-control" id="userName" placeholder="Enter username">
+                                    <input value="${user.userName}" name="userName" type="text" class="form-control" id="userName" placeholder="Enter username">
                                 </div>
-                                <div>
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input name ="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input value="${user.email}" name ="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                                 </div>
-                            </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
                             </div>
-                            <button type="submit" class="btn btn-primary">Create</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
 
                     </form>
 
